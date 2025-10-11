@@ -1,16 +1,21 @@
-## Hi there 👋
+## Hey there 👋
 
-<!--
-**Muhammad-UmarX/Muhammad-UmarX** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This is Muhammad Umar Saeed, an Artificial Intelligence student.
+I'm currently learning machine learning and I'll be sharing my experiences. 
 
-Here are some ideas to get you started:
+# Programming Skills I have:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+C++
+Python
+Html/CSS
+
+# Tech-Based Interests:
+
+AI/Machine Learning/Deep Learning
+Natural Language Processing
+Computer Vision
+
+
+# To reach out:
+
+mohammadumar.s01x@gmail.com
