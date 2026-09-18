@@ -7,11 +7,15 @@ I'm currently learning machine learning and I'll be sharing my experiences.
 
 C++
 Python
+LangChain
+LangGraph
 Html/CSS
 
 # Tech-Based Interests:
 
 AI/Machine Learning/Deep Learning
+Agentic AI
+AI Engineering
 Natural Language Processing
 Computer Vision
 
