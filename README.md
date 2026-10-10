@@ -180,24 +180,6 @@
 
 <div align="center">
 
-## 「 CONTRIBUTION SNAKE 」
-
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Muhammad-UmarX/Muhammad-UmarX/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Muhammad-UmarX/Muhammad-UmarX/output/github-snake.svg" />
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/Muhammad-UmarX/Muhammad-UmarX/output/github-snake-dark.svg" width="100%" />
-</picture>
-
-</div>
-
-<br/><br/>
-
-<img src="./assets/divider.svg" width="100%" />
-
-<br/>
-
 <!-- ═══════════════════════ DEV QUOTE ═══════════════════════ -->
 
 <div align="center">
