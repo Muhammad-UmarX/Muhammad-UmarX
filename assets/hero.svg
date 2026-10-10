@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 400" width="100%">
+  <defs>
+    <filter id="gxl" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="14"/>
+    </filter>
+    <filter id="glg" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7"/>
+    </filter>
+    <filter id="gmd" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
+    </filter>
+    <filter id="gsm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+    </filter>
+    <filter id="tglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+    </filter>
+
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#DC143C" stroke-width="0.3" opacity="0.07"/>
+    </pattern>
+
+    <radialGradient id="bgr" cx="75%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#150505"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+
+    <!-- ════ BOLT PATHS ════ -->
+    <!-- A: main diagonal upper-right -->
+    <path id="pa" d="M1080,0 L1058,42 L1082,50 L1045,98 L1070,106 L1030,158 L1058,166 L1015,220 L1042,228 L1000,282 L1025,290 L988,345 L1010,352 L978,400" fill="none"/>
+    <path id="pa1" d="M1045,98 L1008,132 L1028,140 L992,175 L1010,182 L978,218" fill="none"/>
+    <path id="pa2" d="M1058,166 L1090,198 L1072,206 L1100,240 L1085,248 L1108,278" fill="none"/>
+    <!-- B: upper center-right -->
+    <path id="pb" d="M880,0 L862,50 L888,58 L855,112 L880,120 L848,178 L872,186 L840,245 L865,252 L835,310" fill="none"/>
+    <path id="pb1" d="M855,112 L818,148 L835,155 L802,192 L820,200 L790,238" fill="none"/>
+    <!-- C: left side -->
+    <path id="pc" d="M120,0 L142,55 L118,62 L148,120 L125,128 L155,188 L132,196 L162,258 L140,266 L168,330" fill="none"/>
+    <path id="pc1" d="M148,120 L182,152 L165,160 L195,195 L178,202 L205,235" fill="none"/>
+    <!-- D: horizontal from right -->
+    <path id="pd" d="M1200,160 L1148,148 L1162,170 L1105,155 L1120,178 L1062,162 L1078,185 L1020,170 L1035,192 L978,178" fill="none"/>
+    <!-- E: bottom-right upward -->
+    <path id="pe" d="M1150,400 L1130,348 L1158,340 L1122,282 L1148,275 L1115,218 L1140,210 L1108,155 L1132,148 L1102,95" fill="none"/>
+    <path id="pe1" d="M1122,282 L1088,258 L1105,250 L1075,225" fill="none"/>
+    <!-- F: ambient top-center -->
+    <path id="pf" d="M580,0 L565,48 L588,55 L558,108 L582,115 L552,168 L575,175 L548,228" fill="none"/>
+    <!-- G: ambient right -->
+    <path id="pg" d="M1200,300 L1150,288 L1165,310 L1108,295 L1125,318 L1068,305 L1082,325 L1028,312" fill="none"/>
+    <!-- H: small bolt bottom-left -->
+    <path id="ph" d="M60,400 L78,350 L55,342 L82,288 L60,280 L88,228" fill="none"/>
+  </defs>
+
+  <style>
+    @keyframes sa{0%,7%{opacity:0}8%{opacity:1}9%{opacity:.12}10%{opacity:.92}12%,100%{opacity:0}}
+    @keyframes sb{0%,24%{opacity:0}25%{opacity:.95}26%{opacity:.08}27%{opacity:.88}30%,100%{opacity:0}}
+    @keyframes sc{0%,42%{opacity:0}43%{opacity:1}44%{opacity:.15}45%{opacity:.9}48%,100%{opacity:0}}
+    @keyframes sd{0%,58%{opacity:0}59%{opacity:.85}60%{opacity:.06}61%{opacity:.78}64%,100%{opacity:0}}
+    @keyframes se{0%,75%{opacity:0}76%{opacity:1}77%{opacity:.18}78%{opacity:.85}81%,100%{opacity:0}}
+    @keyframes sf{0%,90%{opacity:0}91%{opacity:.92}92%{opacity:.1}93%{opacity:.82}96%,100%{opacity:0}}
+    @keyframes am{0%,100%{opacity:.08}50%{opacity:.18}}
+    @keyframes tp{0%,100%{opacity:.88}50%{opacity:1}}
+    @keyframes gp{0%,100%{opacity:.18}50%{opacity:.38}}
+
+    .sa{animation:sa 10s infinite}.sb{animation:sb 10s infinite}.sc{animation:sc 10s infinite}
+    .sd{animation:sd 10s infinite}.se{animation:se 10s infinite}.sf{animation:sf 10s infinite}
+    .am{animation:am 5s ease-in-out infinite}
+    .tp{animation:tp 3s ease-in-out infinite}.gp{animation:gp 3s ease-in-out infinite}
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#050505"/>
+  <rect width="1200" height="400" fill="url(#bgr)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <!-- ═══ STRIKE BOLTS ═══ -->
+  <!-- Bolt A -->
+  <g class="sa">
+    <use href="#pa" stroke="#DC143C" stroke-width="10" opacity=".25" filter="url(#gxl)"/>
+    <use href="#pa" stroke="#FF2020" stroke-width="3" filter="url(#gmd)"/>
+    <use href="#pa" stroke="#FF9999" stroke-width=".8"/>
+    <use href="#pa1" stroke="#DC143C" stroke-width="6" opacity=".2" filter="url(#glg)"/>
+    <use href="#pa1" stroke="#FF2020" stroke-width="1.8" filter="url(#gsm)"/>
+    <use href="#pa1" stroke="#FF8888" stroke-width=".5"/>
+    <use href="#pa2" stroke="#DC143C" stroke-width="5" opacity=".18" filter="url(#glg)"/>
+    <use href="#pa2" stroke="#FF2020" stroke-width="1.5" filter="url(#gsm)"/>
+    <use href="#pa2" stroke="#FF8888" stroke-width=".5"/>
+  </g>
+
+  <!-- Bolt B -->
+  <g class="sb">
+    <use href="#pb" stroke="#DC143C" stroke-width="9" opacity=".22" filter="url(#gxl)"/>
+    <use href="#pb" stroke="#FF2020" stroke-width="2.8" filter="url(#gmd)"/>
+    <use href="#pb" stroke="#FF9999" stroke-width=".7"/>
+    <use href="#pb1" stroke="#DC143C" stroke-width="5" opacity=".18" filter="url(#glg)"/>
+    <use href="#pb1" stroke="#FF2020" stroke-width="1.5" filter="url(#gsm)"/>
+    <use href="#pb1" stroke="#FF8888" stroke-width=".5"/>
+  </g>
+
+  <!-- Bolt C -->
+  <g class="sc">
+    <use href="#pc" stroke="#DC143C" stroke-width="8" opacity=".2" filter="url(#gxl)"/>
+    <use href="#pc" stroke="#FF2020" stroke-width="2.5" filter="url(#gmd)"/>
+    <use href="#pc" stroke="#FF9999" stroke-width=".7"/>
+    <use href="#pc1" stroke="#DC143C" stroke-width="5" opacity=".18" filter="url(#glg)"/>
+    <use href="#pc1" stroke="#FF2020" stroke-width="1.5" filter="url(#gsm)"/>
+    <use href="#pc1" stroke="#FF8888" stroke-width=".5"/>
+  </g>
+
+  <!-- Bolt D -->
+  <g class="sd">
+    <use href="#pd" stroke="#DC143C" stroke-width="7" opacity=".2" filter="url(#gxl)"/>
+    <use href="#pd" stroke="#FF2020" stroke-width="2.2" filter="url(#gmd)"/>
+    <use href="#pd" stroke="#FF9999" stroke-width=".6"/>
+  </g>
+
+  <!-- Bolt E -->
+  <g class="se">
+    <use href="#pe" stroke="#DC143C" stroke-width="8" opacity=".22" filter="url(#gxl)"/>
+    <use href="#pe" stroke="#FF2020" stroke-width="2.5" filter="url(#gmd)"/>
+    <use href="#pe" stroke="#FF9999" stroke-width=".7"/>
+    <use href="#pe1" stroke="#DC143C" stroke-width="4" opacity=".15" filter="url(#glg)"/>
+    <use href="#pe1" stroke="#FF2020" stroke-width="1.2" filter="url(#gsm)"/>
+  </g>
+
+  <!-- Bolt H (small, bottom-left) -->
+  <g class="sf">
+    <use href="#ph" stroke="#DC143C" stroke-width="6" opacity=".18" filter="url(#gxl)"/>
+    <use href="#ph" stroke="#FF2020" stroke-width="2" filter="url(#gmd)"/>
+    <use href="#ph" stroke="#FF9999" stroke-width=".6"/>
+  </g>
+
+  <!-- ═══ AMBIENT BOLTS (always faintly visible) ═══ -->
+  <g class="am">
+    <use href="#pf" stroke="#DC143C" stroke-width="6" opacity=".3" filter="url(#gxl)"/>
+    <use href="#pf" stroke="#FF2020" stroke-width="1.5" filter="url(#gmd)"/>
+    <use href="#pf" stroke="#FF8888" stroke-width=".5"/>
+    <use href="#pg" stroke="#DC143C" stroke-width="5" opacity=".25" filter="url(#gxl)"/>
+    <use href="#pg" stroke="#FF2020" stroke-width="1.2" filter="url(#gmd)"/>
+    <use href="#pg" stroke="#FF8888" stroke-width=".4"/>
+  </g>
+
+  <!-- ═══ ELECTRIC SPARKS ═══ -->
+  <circle cx="1045" cy="98" r="2" fill="#FF4444" filter="url(#gsm)">
+    <animate attributeName="opacity" values="0;0;1;0.2;0;0;0;0;0;0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="855" cy="112" r="1.8" fill="#FF4444" filter="url(#gsm)">
+    <animate attributeName="opacity" values="0;0;0;0;1;0.15;0;0;0;0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="148" cy="120" r="1.5" fill="#FF4444" filter="url(#gsm)">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;1;0;0;0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1062" cy="162" r="1.8" fill="#FF6666" filter="url(#gsm)">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;1;0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1122" cy="282" r="1.5" fill="#FF4444" filter="url(#gsm)">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="978" cy="178" r="2" fill="#FF5555" filter="url(#gsm)">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;0;0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ═══ TEXT ═══ -->
+  <!-- Title glow -->
+  <text class="gp" x="600" y="185" text-anchor="middle" fill="#DC143C" font-size="70" font-weight="900" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" letter-spacing="10" filter="url(#tglow)">MUHAMMAD UMAR</text>
+
+  <!-- Title main -->
+  <text class="tp" x="600" y="185" text-anchor="middle" fill="#FFFFFF" font-size="70" font-weight="900" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" letter-spacing="10">MUHAMMAD UMAR</text>
+
+  <!-- Tagline -->
+  <text x="600" y="232" text-anchor="middle" fill="#DC143C" font-size="18" font-weight="400" font-family="Consolas,'Courier New',monospace" letter-spacing="6" opacity="0.9">VENTURING THE AI DIMENSION</text>
+
+  <!-- Decorative lines -->
+  <line x1="370" y1="252" x2="830" y2="252" stroke="#DC143C" stroke-width="0.8" opacity="0.3"/>
+  <line x1="410" y1="256" x2="790" y2="256" stroke="#DC143C" stroke-width="0.4" opacity="0.15"/>
+
+  <!-- Subtitle -->
+  <text x="600" y="282" text-anchor="middle" fill="#777" font-size="13" font-family="Consolas,'Courier New',monospace" letter-spacing="3">AI/ML ENGINEER  ·  NEURAL ARCHITECT  ·  SYSTEM BUILDER</text>
+
+  <!-- Bottom edge glow -->
+  <line x1="0" y1="399" x2="1200" y2="399" stroke="#DC143C" stroke-width="0.5" opacity="0.2"/>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 355" width="100%">
+  <defs>
+    <filter id="gl" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="scangrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DC143C" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#DC143C" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#DC143C" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    @keyframes scan{0%{transform:translateY(0)}100%{transform:translateY(310px)}}
+    .cursor{animation:blink 1s step-end infinite}
+    .scanline{animation:scan 5s linear infinite}
+    text{font-family:Consolas,'Courier New','Liberation Mono',monospace}
+  </style>
+
+  <!-- Frame -->
+  <rect x="0" y="0" width="850" height="355" rx="12" fill="#0a0a0a" stroke="#DC143C" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="850" height="38" rx="12" fill="#111118"/>
+  <rect x="0" y="26" width="850" height="12" fill="#111118"/>
+
+  <!-- Window dots -->
+  <circle cx="22" cy="19" r="6.5" fill="#FF5F57"/>
+  <circle cx="44" cy="19" r="6.5" fill="#FFBD2E"/>
+  <circle cx="66" cy="19" r="6.5" fill="#28CA41"/>
+
+  <!-- Title -->
+  <text x="425" y="24" text-anchor="middle" fill="#555" font-size="12">muhammad@umar: ~/profile</text>
+
+  <!-- CRT Scanline -->
+  <rect class="scanline" x="1" y="39" width="848" height="8" fill="url(#scangrad)" rx="0"/>
+
+  <!-- ═══ TERMINAL CONTENT ═══ -->
+
+  <!-- Command prompt -->
+  <text x="28" y="72" font-size="14">
+    <tspan fill="#DC143C" filter="url(#gl)">&gt;</tspan>
+    <tspan fill="#C9D1D9" dx="8">system.identify()</tspan>
+  </text>
+
+  <!-- Separator -->
+  <text x="28" y="100" fill="#2a2a2a" font-size="14">────────────────────────────────────────────────────────</text>
+
+  <!-- Name -->
+  <text y="132" font-size="14.5">
+    <tspan x="28" fill="#DC143C" font-weight="bold">Name</tspan>
+    <tspan x="128" fill="#444">:</tspan>
+    <tspan x="148" fill="#FFFFFF">Muhammad Umar</tspan>
+  </text>
+
+  <!-- Role -->
+  <text y="162" font-size="14.5">
+    <tspan x="28" fill="#DC143C" font-weight="bold">Role</tspan>
+    <tspan x="128" fill="#444">:</tspan>
+    <tspan x="148" fill="#FFFFFF">AI/ML Engineer · Neural Architect</tspan>
+  </text>
+
+  <!-- Focus -->
+  <text y="192" font-size="14.5">
+    <tspan x="28" fill="#DC143C" font-weight="bold">Focus</tspan>
+    <tspan x="128" fill="#444">:</tspan>
+    <tspan x="148" fill="#FFFFFF">LangChain · LangGraph · Deep Learning · Gen AI</tspan>
+  </text>
+
+  <!-- Stack -->
+  <text y="222" font-size="14.5">
+    <tspan x="28" fill="#DC143C" font-weight="bold">Stack</tspan>
+    <tspan x="128" fill="#444">:</tspan>
+    <tspan x="148" fill="#FFFFFF">Python · C/C++ · TensorFlow · PyTorch</tspan>
+  </text>
+
+  <!-- Mission -->
+  <text y="252" font-size="14.5">
+    <tspan x="28" fill="#DC143C" font-weight="bold">Mission</tspan>
+    <tspan x="128" fill="#444">:</tspan>
+    <tspan x="148" fill="#FFFFFF">Venturing the AI Dimension</tspan>
+  </text>
+
+  <!-- Separator -->
+  <text x="28" y="280" fill="#2a2a2a" font-size="14">────────────────────────────────────────────────────────</text>
+
+  <!-- Status -->
+  <text y="310" font-size="14.5">
+    <tspan x="28" fill="#DC143C" font-weight="bold">Status</tspan>
+    <tspan x="128" fill="#444">:</tspan>
+    <tspan x="148" fill="#28CA41">●</tspan>
+    <tspan fill="#888" dx="6">Online — Building intelligent systems...</tspan>
+  </text>
+
+  <!-- Blinking cursor prompt -->
+  <text x="28" y="342" font-size="14">
+    <tspan fill="#DC143C" filter="url(#gl)">&gt;</tspan>
+    <tspan class="cursor" fill="#C9D1D9" dx="8">█</tspan>
+  </text>
+</svg>
